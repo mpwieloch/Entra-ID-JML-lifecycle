@@ -37,7 +37,7 @@ Eight security groups were created in the lab tenant, one per fictional role. Gr
 | SG-Compliance-Users | Compliance | Compliance Officer | Read-only audit log access |
 | SG-Contractors | IT / Vendor | Contractor | AD standard, time-limited |
 
-![Fictional employee population](./evidence/Screenshot_2026-09-14_160337.png)
+![Fictional employee population](./Screenshot_2026-09-14_160337.png)
 *Figure 1 — Fictional employee population created in the lab tenant (Users > All users)*
 
 ---
@@ -60,10 +60,10 @@ Eight security groups were created in the lab tenant, one per fictional role. Gr
 | Step 6 | Provisioning verified directly in the tenant (see evidence below) |
 | Design Note | Group assignment was performed as a deliberate separate step after identity creation, to clearly demonstrate role-based provisioning rather than ad hoc access at hire |
 
-![Jessica Carter profile at creation](./evidence/Screenshot_2026-09-14_181211.png)
+![Jessica Carter profile at creation](./Screenshot_2026-09-14_181211.png)
 *Figure 2 — Jessica Carter's profile at creation: Job title = Finance Analyst, Department = Finance, Account enabled = Yes*
 
-![Jessica Carter group membership](./evidence/Screenshot_2026-09-14_181316.png)
+![Jessica Carter group membership](./Screenshot_2026-09-14_181316.png)
 *Figure 3 — Jessica Carter's group membership confirming SG-Finance-Users assignment*
 
 ---
@@ -84,13 +84,13 @@ Eight security groups were created in the lab tenant, one per fictional role. Gr
 | Step 5 | Final group membership verified — no residual Finance access remained |
 | Validates | Directly tests the stale-access and over-provisioning findings from the RBAC Access Governance Model project |
 
-![Jessica Carter profile after role change](./evidence/Screenshot_2026-09-14_181526.png)
+![Jessica Carter profile after role change](./Screenshot_2026-09-14_181526.png)
 *Figure 4 — Jessica Carter's profile after the role change: Job title = Sales Representative, Department = Sales*
 
-![SG-Sales-Users membership](./evidence/Screenshot_2026-09-14_181738.png)
+![SG-Sales-Users membership](./Screenshot_2026-09-14_181738.png)
 *Figure 5 — SG-Sales-Users membership confirming Jessica Carter was added to the new role's group*
 
-![Jessica Carter group list](./evidence/Screenshot_2026-09-14_181752.png)
+![Jessica Carter group list](./Screenshot_2026-09-14_181752.png)
 *Figure 6 — Jessica Carter's group list showing only SG-Sales-Users, confirming SG-Finance-Users access was fully removed*
 
 ---
@@ -109,13 +109,13 @@ Eight security groups were created in the lab tenant, one per fictional role. Gr
 | Step 5 | Access removal verified directly in the tenant |
 | Design Note | Identity retained (not deleted) to preserve an audit trail, consistent with standard offboarding practice. Using one identity across all three stages models a realistic full employee lifecycle rather than three disconnected test users. |
 
-![Jessica Carter account disabled](./evidence/Screenshot_2026-09-14_181856.png)
+![Jessica Carter account disabled](./Screenshot_2026-09-14_181856.png)
 *Figure 7 — Jessica Carter's account status set to Disabled*
 
-![Removing group membership](./evidence/Screenshot_2026-09-14_181943.png)
+![Removing group membership](./Screenshot_2026-09-14_181943.png)
 *Figure 8 — Removing Jessica Carter's membership from SG-Sales-Users*
 
-![Empty group membership confirmed](./evidence/Screenshot_2026-09-14_181957.png)
+![Empty group membership confirmed](./Screenshot_2026-09-14_181957.png)
 *Figure 9 — Confirmation that Jessica Carter is no longer a member of any groups*
 
 ---
@@ -133,13 +133,13 @@ Eight security groups were created in the lab tenant, one per fictional role. Gr
 | Step 4 | Group membership confirmed empty after removal |
 | Honesty Note | Contractor access expiration was manually simulated because a native contract end-date/expiration field was not available through the current Entra user-management interface in this tenant. This is documented explicitly rather than claiming automatic expiration. |
 
-![Contractor profile enabled](./evidence/Screenshot_2026-09-14_182138.png)
+![Contractor profile enabled](./Screenshot_2026-09-14_182138.png)
 *Figure 10 — Contractor profile showing Account status = Enabled prior to access removal*
 
-![Contractor group membership](./evidence/Screenshot_2026-09-14_182208.png)
+![Contractor group membership](./Screenshot_2026-09-14_182208.png)
 *Figure 11 — Contractor's group membership showing SG-Contractors prior to removal*
 
-![Contractor group membership removed](./evidence/Screenshot_2026-09-14_182508.png)
+![Contractor group membership removed](./Screenshot_2026-09-14_182508.png)
 *Figure 12 — Confirmation that group membership was removed from SG-Contractors; identity remains intact*
 
 ---
